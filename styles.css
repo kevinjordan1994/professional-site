@@ -25,7 +25,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background-color: #fff;
+  background-color: var(--dark-blue);
+  color: var(--off-white);
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -43,8 +44,13 @@ body {
   font-size: 1.5rem;
 }
 
-.nav-links li {
+.nav-links a {
   text-decoration: none;
+  color: var(--off-white);
+}
+
+.nav-links a:hover {
+  color: var(--light-blue);
 }
 
 /* HOME */
@@ -230,6 +236,7 @@ body {
 .bottom_row {
   display: flex;
   gap: 2rem;
+  align-items: flex-start;
 }
 
 .skill {
@@ -238,6 +245,11 @@ body {
   background-color: var(--off-white);
   border-radius: 1rem;
   width: 12rem;
+  transition: all 0.25s ease-out;
+}
+
+.skill:hover {
+  width: 14rem;
 }
 
 .skill img {
