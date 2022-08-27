@@ -167,6 +167,59 @@ body {
   text-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 1000px) {
+  .title-container h1 {
+    font-size: 4.5rem;
+  }
+
+  .title-container h3 {
+    font-size: 2rem;
+  }
+
+  @keyframes title_fade_in {
+    from {
+      opacity: 0;
+      font-size: 7rem;
+    }
+
+    to {
+      opacity: 1;
+      font-size: 4.5rem;
+    }
+  }
+
+  .links-container {
+    top: 65%;
+  }
+}
+
+@media (max-width: 500px) {
+  .title-container h1 {
+    font-size: 3rem;
+  }
+
+  .title-container h3 {
+    font-size: 1.5rem;
+  }
+
+  @keyframes title_fade_in {
+    from {
+      opacity: 0;
+      font-size: 3.5rem;
+    }
+
+    to {
+      opacity: 1;
+      font-size: 3rem;
+    }
+  }
+
+  .links-container {
+    font-size: 2rem;
+    gap: 1rem;
+  }
+}
+
 /* ABOUT */
 
 #about {
@@ -207,6 +260,44 @@ body {
 .about_image img {
   width: 100%;
   border-radius: 100%;
+}
+
+@media (max-width: 1200px) {
+  .about-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about_image {
+    text-align: center;
+  }
+
+  .about_image img {
+    width: 60%;
+    border-radius: 100%;
+  }
+
+  .mobile {
+    display: inline-block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .about_textbox h2 {
+    font-size: 2rem;
+  }
+
+  .about_textbox p {
+    font-size: 1rem;
+  }
+
+  .about-container {
+    padding: 10% 15%;
+  }
 }
 
 /* SKILLS */
@@ -254,6 +345,40 @@ body {
 
 .skill img {
   width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .skills_container {
+    padding: 2% 0 16%;
+  }
+
+  .skill {
+    width: 6rem;
+    padding: 0.5rem;
+  }
+
+  .skill:hover {
+    width: 8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .skill {
+    width: 4rem;
+  }
+
+  .skill:hover {
+    width: 6rem;
+  }
+
+  .skills_container {
+    gap: 1rem;
+  }
+
+  #skills h2 {
+    font-size: 2rem;
+    padding-top: 10%;
+  }
 }
 
 /* PROJECTS */
@@ -322,6 +447,17 @@ body {
 .project a:hover,
 .project a:active {
   color: var(--light-blue);
+}
+
+@media (max-width: 1200px) {
+  .projects_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 100%;
+  }
 }
 
 /* FOOTER */
