@@ -5,14 +5,13 @@
 }
 
 :root {
-  --dark-blue: #1c3879;
-  --light-blue: #607eaa;
-  --second-lightest: #eae3d2;
-  --off-white: #f9f5eb;
+  --primary-color: #1363df;
+  --dark: #a3a7de;
+  --light: #e6f4f1;
 }
 
 body {
-  background-color: var(--off-white);
+  background-color: #fff;
 }
 
 .section {
@@ -25,8 +24,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background-color: var(--dark-blue);
-  color: var(--off-white);
+  background-color: var(--primary-color);
+  color: #fff;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -46,11 +45,11 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--off-white);
+  color: #fff;
 }
 
 .nav-links a:hover {
-  color: var(--light-blue);
+  color: var(--light);
 }
 
 /* HOME */
@@ -73,7 +72,7 @@ body {
 .header-image img {
   width: 105%;
   height: 100%;
-  animation: home_image_fadeout 2s ease-in-out;
+  animation: home_image_fadeout 1s ease-in-out;
   /* filter: blur(3px); */
   opacity: 1;
 }
@@ -110,7 +109,7 @@ body {
 .title-container h1 {
   text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
   font-size: 8rem;
-  animation: title_fade_in 2s ease-in-out;
+  animation: title_fade_in 1s ease-in-out;
 }
 
 .title-container h3 {
@@ -120,7 +119,7 @@ body {
 }
 
 .sub-title {
-  background-color: var(--dark-blue);
+  background-color: var(--primary-color);
   padding: 0.25rem 1rem;
   border-radius: 1rem;
   margin: 0 auto;
@@ -155,7 +154,7 @@ body {
 }
 
 .title-link {
-  color: var(--off-white);
+  color: var(--light);
   cursor: pointer;
   text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in-out;
@@ -163,7 +162,7 @@ body {
 
 .title-link:hover,
 .title-link:active {
-  color: var(--dark-blue);
+  color: var(--dark);
   text-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
 }
 
@@ -225,6 +224,7 @@ body {
 #about {
   width: 100%;
   position: relative;
+  background-color: var(--light);
 }
 
 .section_hidden {
@@ -240,14 +240,15 @@ body {
 }
 
 .about_textbox {
-  background-color: var(--dark-blue);
-  color: var(--off-white);
+  background-color: #fff;
+  color: #111;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
 
 .about_textbox h2 {
+  color: var(--primary-color);
   font-size: 3rem;
   margin-bottom: 2rem;
 }
@@ -264,7 +265,7 @@ body {
 
 @media (max-width: 1200px) {
   .about-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 2rem;
   }
 
@@ -275,14 +276,6 @@ body {
   .about_image img {
     width: 60%;
     border-radius: 100%;
-  }
-
-  .mobile {
-    display: inline-block;
-  }
-
-  .desktop {
-    display: none;
   }
 }
 
