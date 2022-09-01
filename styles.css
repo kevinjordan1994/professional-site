@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
@@ -194,22 +195,22 @@ body {
 
 @media (max-width: 500px) {
   .title-container h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .title-container h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   @keyframes title_fade_in {
     from {
       opacity: 0;
-      font-size: 3.5rem;
+      font-size: 5rem;
     }
 
     to {
       opacity: 1;
-      font-size: 3rem;
+      font-size: 4rem;
     }
   }
 
@@ -223,6 +224,7 @@ body {
 
 #about {
   width: 100%;
+  min-height: 100vh;
   position: relative;
   background-color: var(--light);
 }
@@ -235,7 +237,7 @@ body {
 .about-container {
   display: flex;
   gap: 5%;
-  padding: 10% 20%;
+  padding: 20%;
   align-items: center;
 }
 
@@ -296,13 +298,14 @@ body {
 /* SKILLS */
 
 #skills {
-  background-color: var(--second-lightest);
+  background-color: #fff;
+  min-height: 100vh;
 }
 
 #skills h2 {
   text-align: center;
   font-size: 4rem;
-  padding-top: 6rem;
+  padding-top: 5%;
   color: var(--dark-blue);
   font-weight: bold;
 }
@@ -313,7 +316,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 2% 0 8%;
+  padding: 2% 0 20%;
 }
 
 .top_row,
@@ -326,7 +329,7 @@ body {
 .skill {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   padding: 1rem;
-  background-color: var(--off-white);
+  background-color: #fff;
   border-radius: 1rem;
   width: 12rem;
   transition: all 0.25s ease-out;
@@ -377,13 +380,12 @@ body {
 /* PROJECTS */
 
 #projects {
-  background-color: var(--light-blue);
+  min-height: 100vh;
 }
 
 #projects h2 {
   text-align: center;
   font-size: 4rem;
-  padding-top: 6rem;
   color: var(--off-white);
   font-weight: bold;
 }
