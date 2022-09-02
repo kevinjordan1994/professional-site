@@ -332,6 +332,7 @@ body {
   width: 100%;
   min-width: 20rem;
   border-radius: 10%;
+  opacity: 0.9;
 }
 
 .skills_mini_img {
