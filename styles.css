@@ -388,6 +388,52 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 1200px) {
+  .skills_textbox {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  .skills_mini_img {
+    width: 6rem;
+  }
+
+  .skills_container h2 {
+    font-size: 4rem;
+    top: 30%;
+    right: 30%;
+  }
+}
+
+@media (max-width: 700px) {
+  .skills_textbox {
+    position: relative;
+    max-width: 80%;
+  }
+
+  .skills_container {
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .skills_container h2 {
+    font-size: 4rem;
+    top: 15%;
+    right: 20%;
+  }
+
+  .bs {
+    left: 75%;
+  }
+
+  .react {
+    left: 60%;
+  }
+}
+
 /* PROJECTS ==========================================*/
 .projects_carousel {
   background-color: black;
