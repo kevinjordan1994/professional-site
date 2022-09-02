@@ -226,6 +226,20 @@ body {
   position: relative;
 }
 
+.about_div {
+  position: relative;
+}
+
+.floating_text {
+  position: absolute;
+  z-index: -1;
+  font-size: 2rem;
+  opacity: 0.15;
+  top: 100px;
+  right: 100px;
+  font-weight: 700;
+}
+
 .section_hidden {
   opacity: 0;
   transform: translateY(8rem);
@@ -241,7 +255,7 @@ body {
 .about_textbox {
   background-color: #fff;
   color: #333;
-  padding: 1.5rem;
+  padding: 3rem;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
@@ -293,102 +307,84 @@ body {
 
 /* SKILLS =====================================*/
 
-#skills {
-  min-height: 100vh;
-}
-
-#skills h2 {
-  text-align: center;
-  font-size: 4rem;
-  padding-top: 5%;
-  font-weight: bold;
-}
-
-.skills_section {
-  width: 60rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  background-color: red;
-}
-
-.skills_img {
-  display: inline-block;
-  background-color: orange;
-  height: 100%;
-  max-width: 20rem;
-}
-
-.skills_img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .skills_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  padding: 10rem 20rem;
+  position: relative;
+  text-align: center;
 }
 
-.top_row,
-.bottom_row {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.skill {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 1rem;
-  width: 8rem;
-  transition: all 0.25s ease-out;
-}
-
-.skill:hover {
-  width: 14rem;
-}
-
-.skill img {
+.skills_imgs {
+  position: relative;
   width: 100%;
+  text-align: center;
 }
 
-@media (max-width: 1000px) {
-  .skills_container {
-    padding: 2% 0 16%;
-  }
-
-  .skill {
-    width: 6rem;
-    padding: 0.5rem;
-  }
-
-  .skill:hover {
-    width: 8rem;
-  }
+.skills_container h2 {
+  position: absolute;
+  color: white;
+  font-size: 10rem;
+  z-index: 5;
+  top: 15%;
+  right: 25%;
 }
 
-@media (max-width: 500px) {
-  .skill {
-    width: 4rem;
-  }
+.skills_big_img {
+  width: 100%;
+  min-width: 20rem;
+  border-radius: 10%;
+}
 
-  .skill:hover {
-    width: 6rem;
-  }
+.skills_mini_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 25%;
+}
 
-  .skills_container {
-    gap: 1rem;
-  }
+.html {
+  top: -6%;
+  left: -12%;
+  z-index: 2;
+}
 
-  #skills h2 {
-    font-size: 2rem;
-    padding-top: 10%;
-  }
+.css {
+  top: -20%;
+  left: 4%;
+  z-index: 3;
+}
+
+.js {
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  width: 30%;
+}
+
+.bs {
+  top: 65%;
+  left: 90%;
+  z-index: 1;
+}
+
+.react {
+  top: 80%;
+  left: 75%;
+  border-radius: 100%;
+}
+
+.skills_textbox {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  background-color: #fff;
+  color: #333;
+  max-width: 40%;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 /* PROJECTS ==========================================*/
