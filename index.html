@@ -39,7 +39,7 @@
   <body>
     <!-- HOME (TOP OF PAGE) -->
     <section id="home">
-      <div class="nav_bar">
+      <nav class="nav_bar">
         <span class="logo">KJ</span>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
@@ -47,7 +47,7 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
         </ul>
-      </div>
+      </nav>
       <div class="header-image">
         <img
           src="./images/antoine-rault-IhWRrZx4-kk-unsplash.jpg"
@@ -78,7 +78,15 @@
 
     <!-- ABOUT -->
     <section id="about">
-      <div class="section">
+      <div class="section about_div">
+        <div class="floating_text">
+          <p>
+            function calcAge(birthdate) {<br />
+            const now = new Date(); <br />
+            return Math.floor((now - birthdate) / 1000 / 60 / 60 / 24 / 365);<br />
+            }
+          </p>
+        </div>
         <div class="about-container">
           <div class="about_textbox">
             <h2>about me</h2>
@@ -93,28 +101,46 @@
 
     <!-- SKILLS -->
     <section id="skills">
-      <div class="section">
+      <div class="skills_container section">
         <h2>skills</h2>
-        <div class="skills_container">
-          <div class="top_row">
-            <div class="skill">
-              <img src="./images/html-5.png" alt="HTML-5" />
-            </div>
-            <div class="skill">
-              <img src="./images/css-3.png" alt="css-3" />
-            </div>
-            <div class="skill">
-              <img src="./images/js.png" alt="JavaScript" />
-            </div>
-          </div>
-          <div class="bottom_row">
-            <div class="skill bs">
-              <img src="./images/bootstrap.png" alt="Bootstrap" />
-            </div>
-            <div class="skill react">
-              <img src="./images/react.png" alt="React JS" />
-            </div>
-          </div>
+        <div class="skills_imgs">
+          <img
+            class="skills_big_img"
+            src="./images/computer.jpg"
+            alt="Keyboard"
+          />
+          <img
+            class="skills_mini_img html"
+            src="./images/html-5.png"
+            alt="HTML5"
+          />
+          <img
+            class="skills_mini_img css"
+            src="./images/css-3.png"
+            alt="CSS3"
+          />
+          <img
+            class="skills_mini_img js"
+            src="./images/js.png"
+            alt="JavaScript"
+          />
+          <img
+            class="skills_mini_img bs"
+            src="./images/bootstrap.png"
+            alt="Bootstrap"
+          />
+          <img
+            class="skills_mini_img react"
+            src="./images/react.png"
+            alt="React"
+          />
+        </div>
+        <div class="skills_textbox">
+          <p>
+            I'm knowledgeable in HTML, CSS and JavaScript and have used them
+            extensively in my development journey. I also use frameworks such as
+            Bootstrap and ReactJS to build modern web applications.
+          </p>
         </div>
       </div>
     </section>
@@ -188,7 +214,19 @@
       </div>
       <div class="attributions">
         <p>
-          Photo by
+          Skills photo by
+          <a
+            href="https://unsplash.com/@christianw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Christian Wiediger</a
+          >
+          on
+          <a
+            href="https://unsplash.com/s/photos/computer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </p>
+        <p>
+          Home photo by
           <a
             href="https://unsplash.com/@antoinerault?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
             >Antoine Rault</a
