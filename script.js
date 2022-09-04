@@ -39,3 +39,33 @@ sections.forEach((section) => {
   section.classList.add(`section_hidden`);
   observer.observe(section);
 });
+
+//CAROUSEL
+const slides = document.querySelectorAll(`.slide`);
+const carouselView = document.getElementById(`carousel_view`);
+let currentSlide = 0;
+const leftBtn = document.querySelector(`.left_btn`);
+const rightBtn = document.querySelector(`.right_btn`);
+
+const changeSlide = (slideNum) => {
+  if (slideNum > slides.length - 1) {
+    carouselView.style.transform = `translateX(0%)`;
+    currentSlide = 0;
+  } else if (slideNum < 0) {
+    carouselView.style.transform = `translateX(${(slides.length - 1) * -100}%)`;
+    currentSlide = slides.length - 1;
+  } else {
+    carouselView.style.transform = `translateX(${slideNum * -100}%)`;
+  }
+};
+leftBtn.addEventListener(`click`, (e) => {
+  e.preventDefault();
+  currentSlide--;
+  changeSlide(currentSlide);
+});
+
+rightBtn.addEventListener(`click`, (e) => {
+  e.preventDefault();
+  currentSlide++;
+  changeSlide(currentSlide);
+});

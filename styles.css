@@ -230,16 +230,6 @@ body {
   position: relative;
 }
 
-.floating_text {
-  position: absolute;
-  z-index: -1;
-  font-size: 2rem;
-  opacity: 0.15;
-  top: 100px;
-  right: 100px;
-  font-weight: 700;
-}
-
 .section_hidden {
   opacity: 0;
   transform: translateY(8rem);
@@ -405,7 +395,7 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .skills_textbox {
     position: relative;
     max-width: 80%;
@@ -435,71 +425,106 @@ body {
 }
 
 /* PROJECTS ==========================================*/
-.projects_carousel {
-  background-color: black;
-  width: 80%;
-  margin: 0 auto;
+.carousel {
   overflow: hidden;
+  width: 80rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.viewfinder {
+  display: flex;
+  transition: transform 400ms ease-in-out;
 }
 
 .slide {
-  width: 100%;
-  height: 50rem;
-  margin: 0 auto;
+  min-width: 80rem;
+  height: 40rem;
+  background-color: black;
+  overflow: hidden;
   position: relative;
 }
 
-.slide_bg_img {
+.left_btn,
+.right_btn {
   position: absolute;
-  width: 2000px;
-  opacity: 0.4;
-  object-fit: contain;
-  top: -15%;
-  left: -15%;
-  z-index: 2;
-}
-
-.slide_title {
-  position: relative;
-  font-size: 8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
   font-weight: 800;
-  color: #fff;
-  z-index: 5;
-  max-width: 80%;
-  padding: 2rem;
+  z-index: 8;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding: 1rem;
+  opacity: 0.7;
+  color: white;
+  transition-property: opacity, background-color;
+  transition-duration: 200ms;
 }
 
-.slide_desc {
-  position: relative;
-  z-index: 5;
-  color: #fff;
-  font-size: 2rem;
-  padding: 2rem 4rem;
+.left_btn:hover,
+.right_btn:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.try_it_div {
+.left_btn {
+  transform: translate(20%, -50%);
+}
+
+.right_btn {
+  right: 0;
+  transform: translate(-20%, -50%);
+}
+
+.slide_img {
+  opacity: 0.3;
   position: absolute;
-  z-index: 5;
-  width: 100%;
-  text-align: center;
-  font-size: 3.5rem;
+  width: 120%;
+  left: -100px;
   bottom: 0;
 }
 
-.try_it_div a {
-  display: inline-block;
-  background-color: black;
-  padding: 1rem;
-  text-decoration: none;
-  font-weight: 700;
-  width: 100%;
-  color: #fff;
-  transition: all 200ms ease-out;
+.bt_img {
+  width: 110%;
+  top: 0;
+  left: 0;
 }
 
-.try_it_div a:hover {
-  background-color: #fff;
-  color: black;
+.slide_title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 5rem;
+  padding: 2rem;
+  position: absolute;
+  text-shadow: 0 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+.slide_desc {
+  color: #fff;
+  font-weight: 500;
+  z-index: 9;
+  width: fit-content;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+}
+
+.slide_link-div {
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.slide_link-div a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /* FOOTER ======================================================*/
@@ -551,5 +576,19 @@ body {
   margin-bottom: 0;
 }
 
-.attributions a {
+/* Floating =======================================*/
+
+.floating_text {
+  position: absolute;
+  z-index: -1;
+  font-size: 2rem;
+  opacity: 0.15;
+  top: 110%;
+  right: 100px;
+  font-weight: 700;
+}
+
+.ft_2 {
+  top: 180%;
+  left: 10%;
 }
