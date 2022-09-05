@@ -33,6 +33,14 @@
       rel="stylesheet"
     />
 
+    <!-- SATISFY FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
@@ -40,13 +48,31 @@
     <!-- HOME (TOP OF PAGE) -->
     <section id="home">
       <nav class="nav_bar">
-        <span class="logo">KJ</span>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-        </ul>
+        <div class="nav_div"><span class="logo fancy_font">KJ</span></div>
+        <div class="nav_div">
+          <div class="links-container">
+            <a
+              href="https://github.com/kevinjordan1994"
+              target="_blank"
+              class="title-link"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/kevin-jordan-807204132/"
+              target="_blank"
+              class="title-link"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+        <div class="nav_div links">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </div>
       </nav>
       <div class="header-image">
         <img
@@ -57,22 +83,8 @@
       <div class="title-container">
         <h1>Kevin Jordan</h1>
         <div class="sub-title">
-          <h3>Developer</h3>
+          <h3 class="fancy_font">Developer</h3>
         </div>
-      </div>
-      <div class="links-container">
-        <a
-          href="https://github.com/kevinjordan1994"
-          target="_blank"
-          class="title-link"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/kevin-jordan-807204132/"
-          target="_blank"
-          class="title-link"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
       </div>
     </section>
 
@@ -81,7 +93,7 @@
       <div class="section about_div">
         <div class="about-container">
           <div class="about_textbox">
-            <h2>about me</h2>
+            <h2 class="fancy_font section_header">about me</h2>
             <p class="about-text"></p>
           </div>
           <div class="about_image">
@@ -98,7 +110,7 @@
           <img src="./images/computer.jpg" alt="Keyboard" />
         </div>
         <div class="skills_textbox">
-          <h2>skills</h2>
+          <h2 class="fancy_font section_header">skills</h2>
           <p>
             I'm knowledgeable in HTML, CSS and JavaScript and have used them
             extensively in my development journey. I also use frameworks such as
@@ -110,7 +122,8 @@
 
     <!-- PROJECTS -->
     <section id="projects">
-      <div class="carousel">
+      <h1 class="fancy_font projects_header">projects</h1>
+      <div class="carousel section">
         <button class="left_btn">&larr;</button
         ><button class="right_btn">&rarr;</button>
         <div id="carousel_view" class="viewfinder">
@@ -121,7 +134,9 @@
               A website I created for my friend's podcasting company.
             </p>
             <div class="slide_link-div">
-              <a href="#">Check it out!</a>
+              <a href="https://wadcomedia.com/" target="_blank"
+                >Check it out!</a
+              >
             </div>
           </div>
           <div class="slide">

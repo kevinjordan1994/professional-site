@@ -29,7 +29,7 @@ const callback = (entries, observer) => {
 
 const options = {
   root: null,
-  threshold: 0.2,
+  threshold: 0.4,
 };
 
 const observer = new IntersectionObserver(callback, options);
