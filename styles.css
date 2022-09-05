@@ -669,4 +669,17 @@ body {
   .floating_text {
     font-size: 1rem;
   }
+
+  .floating_image img {
+    width: 200px;
+  }
+
+  .js {
+    left: 0;
+  }
+
+  .html {
+    top: 140%;
+    left: 60%;
+  }
 }
