@@ -40,6 +40,26 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
+const imageOptions = {
+  root: null,
+  threshold: 0.8,
+};
+
+//LAZY LOADING
+const loadImage = (entries, observer) => {
+  const [entry] = entries;
+  const image = entry.target;
+  if (entry.isIntersecting) {
+    image.classList.remove(`lazy`);
+    image.src = image.dataset.src;
+  }
+};
+
+const imageObserver = new IntersectionObserver(loadImage, imageOptions);
+
+const lazyImages = document.querySelectorAll(`.lazy`);
+lazyImages.forEach((image) => imageObserver.observe(image));
+
 //CAROUSEL
 const slides = document.querySelectorAll(`.slide`);
 const carouselView = document.getElementById(`carousel_view`);
