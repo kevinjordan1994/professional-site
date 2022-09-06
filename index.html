@@ -5,19 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kevin Jordan</title>
-    <!-- CSS only -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <!-- JavaScript Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-      crossorigin="anonymous"
-    ></script>
 
     <!-- FONTAWESOME -->
     <script
@@ -41,6 +28,12 @@
       rel="stylesheet"
     />
 
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
@@ -48,7 +41,9 @@
     <!-- HOME (TOP OF PAGE) -->
     <section id="home">
       <nav class="nav_bar">
-        <div class="nav_div"><span class="logo fancy_font">KJ</span></div>
+        <div class="nav_div">
+          <span class="logo"><a class="fancy_font" href="#">KJ</a></span>
+        </div>
         <div class="nav_div">
           <div class="links-container">
             <a
@@ -90,15 +85,13 @@
 
     <!-- ABOUT -->
     <section id="about">
-      <div class="section about_div">
-        <div class="about-container">
-          <div class="about_textbox">
-            <h2 class="fancy_font section_header">about me</h2>
-            <p class="about-text"></p>
-          </div>
-          <div class="about_image">
-            <img src="./images/selfie.jpg" alt="Kevin Jordan" />
-          </div>
+      <div class="about-container section">
+        <div class="about_textbox">
+          <h2 class="fancy_font section_header">about me</h2>
+          <p class="about-text"></p>
+        </div>
+        <div class="about_image">
+          <img src="./images/selfie.jpg" alt="Kevin Jordan" />
         </div>
       </div>
     </section>
@@ -112,9 +105,11 @@
         <div class="skills_textbox">
           <h2 class="fancy_font section_header">skills</h2>
           <p>
-            I'm knowledgeable in HTML, CSS and JavaScript and have used them
-            extensively in my development journey. I also use frameworks such as
-            Bootstrap and ReactJS to build modern web applications.
+            I'm knowledgeable in <strong>HTML</strong>, <strong>CSS</strong> and
+            <strong>JavaScript</strong> and have used them extensively in my
+            development journey. I also use frameworks and libraries such as
+            <strong>Bootstrap</strong> and <strong>React</strong> to build
+            modern web applications.
           </p>
         </div>
       </div>
@@ -146,36 +141,45 @@
               A bug tracking application I made using React JS and Redux.
             </p>
             <div class="slide_link-div">
-              <a href="#">Check it out!</a>
+              <a
+                href="https://github.com/kevinjordan1994/bug-tracker-new"
+                target="_blank"
+                >Check it out!</a
+              >
             </div>
           </div>
-          <div class="slide">3</div>
+          <div class="slide">
+            <img class="slide_img bt_img" src="./images/smart-macro.PNG" />
+            <h1 class="slide_title">Smart Macro</h1>
+            <p class="slide_desc">
+              A macro-based meal finding application utilizing the Spoonacular
+              API.
+            </p>
+            <div class="slide_link-div">
+              <a
+                href="https://kevinjordan1994.github.io/smart-macro/"
+                target="_blank"
+                >Check it out!</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
     <section id="footer">
-      <h2>contact me</h2>
+      <h2 class="fancy_font">contact me</h2>
       <div class="contact_info">
         <ul>
-          <li>phone: 904-507-8483</li>
-          <li>email: kevinjordan199449@gmail.com</li>
+          <li>phone: <a href="tel:+9045078483">904-507-8483</a></li>
+          <li>
+            email:
+            <a href="mailto:kevinjordan199449@gmail.com"
+              >kevinjordan199449@gmail.com</a
+            >
+          </li>
         </ul>
-      </div>
-      <div class="links-container_footer">
-        <a
-          href="https://github.com/kevinjordan1994"
-          target="_blank"
-          class="title-link"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/kevin-jordan-807204132/"
-          target="_blank"
-          class="title-link"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
       </div>
       <div class="attributions">
         <p>
@@ -233,6 +237,7 @@
         </p>
       </div>
     </section>
+
     <section id="floating">
       <div class="floating_text">
         <p>
@@ -255,6 +260,9 @@
       </div>
       <div class="floating_image html">
         <img src="./images/html-5.png" alt="HTML" />
+      </div>
+      <div class="floating_image css">
+        <img src="./images/css-3.png" alt="CSS" />
       </div>
     </section>
   </body>
