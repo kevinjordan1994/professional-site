@@ -31,6 +31,11 @@ html {
   font-family: "Satisfy", cursive;
 }
 
+.lazy,
+.permanent_blur {
+  filter: blur(0.25rem);
+}
+
 body {
   background-color: #fff;
 }
@@ -133,6 +138,7 @@ body {
   height: 100%;
   animation: home_image_fadeout 1s ease-in-out;
   opacity: 1;
+  object-fit: cover;
 }
 
 @keyframes home_image_fadeout {
@@ -298,6 +304,7 @@ body {
 .about_image img {
   width: 100%;
   max-width: 50rem;
+  min-width: 20rem;
   border-radius: 100%;
 }
 
@@ -314,6 +321,7 @@ body {
   .about_image img {
     width: 60%;
     max-width: 30rem;
+    min-width: 8rem;
     border-radius: 100%;
   }
 
