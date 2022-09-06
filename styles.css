@@ -50,9 +50,11 @@ body {
   flex: 1;
 }
 
-.logo {
+.logo a {
   font-size: 2rem;
   font-weight: bold;
+  color: #fff;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -737,6 +739,10 @@ body {
   border-radius: 100%;
 }
 
+.css {
+  top: 200%;
+}
+
 @media (max-width: 1650px) {
   .html {
     left: 50%;
@@ -747,11 +753,23 @@ body {
   .floating_image img {
     width: 300px;
   }
+
+  .html {
+    top: 140%;
+  }
 }
 
 @media (max-width: 660px) {
   .floating_text {
     font-size: 1rem;
+  }
+
+  .css {
+    top: 210%;
+  }
+
+  .ft_2 {
+    top: 200%;
   }
 
   .floating_image img {
