@@ -42,17 +42,23 @@ sections.forEach((section) => {
 
 const imageOptions = {
   root: null,
-  threshold: 0.8,
+  threshold: 0,
 };
 
 //LAZY LOADING
 const loadImage = (entries, observer) => {
   const [entry] = entries;
   const image = entry.target;
-  if (entry.isIntersecting) {
+
+  if (!entry.isIntersecting) return;
+
+  image.src = image.dataset.src;
+
+  image.addEventListener(`load`, () => {
     image.classList.remove(`lazy`);
-    image.src = image.dataset.src;
-  }
+  });
+
+  observer.unobserve(image);
 };
 
 const imageObserver = new IntersectionObserver(loadImage, imageOptions);
