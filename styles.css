@@ -24,7 +24,7 @@ html {
   --secondary-color: #cda715;
   --darker-shade: #1d2c67;
   --section-gap-length-8: 8rem;
-  --side-padding-lg: 25%;
+  --side-padding-lg: 20%;
 }
 
 .fancy_font {
@@ -308,7 +308,7 @@ body {
   border-radius: 100%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .about-container {
     flex-direction: column-reverse;
     gap: 2rem;
@@ -535,12 +535,12 @@ body {
 
 @media (max-width: 1280px) {
   .carousel {
-    width: 40rem;
+    width: 60rem;
   }
 
   .slide {
-    min-width: 40rem;
-    height: 20rem;
+    min-width: 60rem;
+    height: 30rem;
     background-color: black;
     overflow: hidden;
     position: relative;
@@ -567,6 +567,17 @@ body {
     font-size: 2rem;
     border-radius: 1rem;
     padding: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .carousel {
+    width: 40rem;
+  }
+
+  .slide {
+    min-width: 40rem;
+    height: 20rem;
   }
 }
 
